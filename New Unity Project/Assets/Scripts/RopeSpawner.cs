@@ -9,12 +9,15 @@ public class RopeSpawner : MonoBehaviour
 
     private Transform ropeT;
     private Camera cam;
+    Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         ropeT = rope.transform;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,9 +36,21 @@ public class RopeSpawner : MonoBehaviour
             {
                 if (hit.collider.tag == "Level")
                 {
-                    Vector3 pos = (hit.point + transform.position) / 2;
-                    Transform rope = Instantiate(ropeT, pos, Quaternion.identity);
-                    
+                    var r = GameObject.FindWithTag("rope");
+                    if (r)
+                    {
+                        Destroy(r);
+                    }
+
+                    Vector3 pos = hit.point - Vector3.up * 1f;
+                    Transform ropeN = Instantiate(ropeT, pos, Quaternion.identity);
+                    ropeN.LookAt(transform.position);
+                    Vector3 len = hit.point - transform.position;
+                    ropeN.localScale.Set(ropeN.localScale.x, len.sqrMagnitude, ropeN.localScale.z);
+                    ropeN.LookAt(transform.position);
+                    rb.isKinematic = false;
+                    GetComponent<SpringJoint>().connectedBody = ropeN.GetComponent<Rigidbody>();
+
                 }
             }
         }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Level
+  - rope
+  - joint
   layers:
   - Default
   - TransparentFX
