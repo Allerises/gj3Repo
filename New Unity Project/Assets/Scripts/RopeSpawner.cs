@@ -11,6 +11,8 @@ public class RopeSpawner : MonoBehaviour
     private Camera cam;
     Rigidbody rb;
 
+    public float pull;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,9 @@ public class RopeSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hit;
+
+        Vector3 hitPoint = Vector3.zero;
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Input.mousePosition;
@@ -31,11 +36,13 @@ public class RopeSpawner : MonoBehaviour
             //Debug.Log(worldMouse);
             Vector3 dir = worldMouse - transform.position;
 
-            RaycastHit hit;
+
             if (Physics.Raycast(transform.position, dir, out hit))
             {
                 if (hit.collider.tag == "Level")
                 {
+                    hitPoint = hit.point;
+
                     var r = GameObject.FindWithTag("rope");
                     if (r)
                     {
@@ -53,6 +60,15 @@ public class RopeSpawner : MonoBehaviour
 
                 }
             }
+        }
+        if (Input.GetMouseButton(1))
+        {
+            rb.useGravity = false;
+            transform.position = Vector3.MoveTowards(transform.position, hitPoint, pull * Time.deltaTime);
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            rb.useGravity = true;
         }
     }
 }

@@ -1,6 +1,6 @@
 WebGL
 PlayerPath?
-C:/Users/Aamir Ali/Desktop/_Local/UnityBuilds
+C:/Users/Aamir Ali/Desktop/_Local/UnityBuilds/Slinger
 SceneListBegin?
 Assets/Prototype.unity
 SceneListEnd?
@@ -118,7 +118,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.CameraMovement
-23aee96de6b6029eeca6e3daac4e630a Assembly-CSharp.dll:.RopeSpawner
+65aac038427d585a11666bc0d9a53e90 Assembly-CSharp.dll:.RopeSpawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ProBuilder2.Examples.HueCube
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
@@ -169,5 +169,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 21c9cb2cd48c7954eca3329ba4443b95 Assembly-CSharp.dll:.pg_SceneMeshRender
 420d73cb5979b4d126f3c0d301bcca59 Assembly-CSharp.dll:ProBuilder2.Examples.CameraControls
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LevelGenerator
+ad4e11445bedf8e9d1a39d57d5b7d0ac Assembly-CSharp.dll:.LevelGenerator
 32dcc1dca94294515dfea07e896e1a84 Assembly-CSharp.dll:ProBuilder2.Examples.RuntimeEdit
