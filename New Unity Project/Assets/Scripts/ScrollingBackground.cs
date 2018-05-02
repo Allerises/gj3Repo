@@ -58,7 +58,7 @@ public class ScrollingBackground : MonoBehaviour {
 			int lastLeft = leftIndex;
 			layers[leftIndex].position = Vector3.right* (layers[rightIndex].position.x - backgroundSize);
 			rightIndex = leftIndex;
-			leftIndex --;
+			leftIndex ++;
 			if(leftIndex <0){
 				leftIndex = layers.Length-1;
 			}
