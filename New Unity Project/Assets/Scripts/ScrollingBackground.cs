@@ -15,6 +15,8 @@ public class ScrollingBackground : MonoBehaviour {
 	public float lastCameraX;
 
 	// Use this for initialization
+
+
 	public void Start () {
 		
 		cameraTransform = Camera.main.transform;
