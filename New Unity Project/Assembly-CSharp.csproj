@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Loopdeloop.cs" />
+     <Compile Include="Assets\Looper.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -67,6 +69,8 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+     <Compile Include="Assets\Scripts\Loopdelooper.cs" />
+     <Compile Include="Assets\Scripts\RoomLooper.cs" />
      <Compile Include="Assets\Scripts\RopeManager.cs" />
      <Compile Include="Assets\Scripts\RopeSpawner.cs" />
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />

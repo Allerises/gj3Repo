@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-
     private Rigidbody2D rb;
     public float speed;
 
@@ -14,4 +13,7 @@ public class CameraMovement : MonoBehaviour
         rb = GameObject.FindWithTag("MainCamera").GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.right * speed;
     }
+
+
+
 }

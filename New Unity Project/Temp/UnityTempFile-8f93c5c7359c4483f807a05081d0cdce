@@ -169,6 +169,8 @@
 -define:UNITY_EDITOR_OSX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+'Assets/Loopdeloop.cs'
+'Assets/Looper.cs'
 'Assets/ProCore/ProBuilder/API Examples/Icosphere FFT/Scripts/CameraControls.cs'
 'Assets/ProCore/ProBuilder/API Examples/Icosphere FFT/Scripts/IcoBumpin.cs'
 'Assets/ProCore/ProBuilder/API Examples/Misc/HueCube.cs'
@@ -185,6 +187,7 @@
 'Assets/Scripts/CameraMovement.cs'
 'Assets/Scripts/Level.cs'
 'Assets/Scripts/LevelGenerator.cs'
+'Assets/Scripts/RoomLooper.cs'
 'Assets/Scripts/RopeManager.cs'
 'Assets/Scripts/RopeSpawner.cs'
 'Assets/Scripts/ScrollingBackground.cs'
