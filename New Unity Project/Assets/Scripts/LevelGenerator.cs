@@ -17,13 +17,13 @@ public class LevelGenerator : MonoBehaviour
         camT = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
         numLevels = levels.Length;
 
-        spawnX = 0;
+        spawnX = 16;
         curY = 5f;
     }
 
     void Update()
     {
-        if (camT.position.x >= spawnX)
+        if (camT.position.x >= spawnX-16)
         {
             spawnX += 16;
             transform.position = new Vector3(spawnX, curY, 0f);
@@ -35,11 +35,11 @@ public class LevelGenerator : MonoBehaviour
             switch (lvl)
             {
                 case 1:
-                    cam.position  += Vector3.up * 0.6f;
+                    cam.position  += Vector3.up * .6f;
                     curY += 0.6f;
                     break;
                 case 2:
-                    cam.position += Vector3.down * 0.6f;
+                    cam.position += Vector3.down * .6f;
                     curY -= 0.6f;
                     break;
             }

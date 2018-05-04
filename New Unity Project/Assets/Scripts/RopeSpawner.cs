@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RopeSpawner : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class RopeSpawner : MonoBehaviour
     {
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         ropeT = rope.transform;
-
+        Time.timeScale = 0;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -30,6 +31,7 @@ public class RopeSpawner : MonoBehaviour
         Vector3 hitPoint = Vector3.zero;
         if (Input.GetMouseButtonDown(0))
         {
+            Time.timeScale = 1f;
             Vector3 mousePos = Input.mousePosition;
             Vector3 worldMouse = cam.ScreenToWorldPoint(mousePos);
             worldMouse = new Vector3(worldMouse.x, worldMouse.y, 0f);
@@ -63,12 +65,13 @@ public class RopeSpawner : MonoBehaviour
         }
         if (Input.GetMouseButton(1))
         {
-            rb.useGravity = false;
-            transform.position = Vector3.MoveTowards(transform.position, hitPoint, pull * Time.deltaTime);
+            //rb.useGravity = false;
+            rb.velocity *= pull;
         }
-        if (Input.GetMouseButtonUp(1))
+
+        if (transform.position.x <= GameObject.FindWithTag("MainCamera").GetComponent<Transform>().position.x - 8f)
         {
-            rb.useGravity = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
